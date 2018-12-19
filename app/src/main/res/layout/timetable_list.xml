@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ListView android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/timetable_list_view"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:orientation="vertical">
 
-</ListView>
+    <ListView
+        android:id="@+id/timetable_list_view"
+        android:layout_marginTop="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="0dp">
+    </ListView>
+
+</LinearLayout>
