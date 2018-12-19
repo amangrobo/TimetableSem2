@@ -2,8 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Welcome"
+        android:layout_margin="64dp"
+        android:textSize="40sp"
+        android:textColor="@color/colorAccent"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -23,6 +31,7 @@
         android:layout_height="wrap_content"
         android:text="Enter"
         android:layout_gravity="center"
-        android:onClick="showTimetable"/>
+        android:onClick="showTimetable"
+        android:textColor="@android:color/black"/>
 
 </LinearLayout>

@@ -54,7 +54,7 @@ public class DayFragment extends Fragment implements android.support.v4.app.Load
 
         }
 
-        branchPreference = getContext().getSharedPreferences("PREFERENCE", MODE_PRIVATE).getString("branchPreference", "").toLowerCase();
+        branchPreference = getContext().getSharedPreferences("PREFERENCE", MODE_PRIVATE).getString("branchPreference", "");
     }
 
     @Override

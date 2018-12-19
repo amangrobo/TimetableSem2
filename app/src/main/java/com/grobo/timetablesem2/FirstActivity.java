@@ -9,14 +9,14 @@ import android.widget.Toast;
 
 public class FirstActivity extends AppCompatActivity {
 
+    private String branchString;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
 
-        setTitle("Welcome");
-
-        Toast.makeText(this, "First Run", Toast.LENGTH_SHORT).show();
+        getSupportActionBar().hide();
 
     }
 
@@ -30,13 +30,11 @@ public class FirstActivity extends AppCompatActivity {
                 alpha.append(rollNumberString.charAt(i));
         }
 
-        String branchString = alpha.toString();
-
-        getSharedPreferences("PREFERENCE", MODE_PRIVATE).getString("branchPreference", "");
+        branchString = alpha.toString().toLowerCase().trim();
 
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("branchPreference", branchString).apply();
-        finish();
-
+        Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
     }
-
 }

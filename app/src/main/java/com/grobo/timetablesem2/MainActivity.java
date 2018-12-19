@@ -6,9 +6,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import java.util.Calendar;
-
 public class MainActivity extends AppCompatActivity {
+
+    String branchPreference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,13 +18,10 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setElevation(0);
         getSupportActionBar().setTitle("TIMETABLE");
 
-        Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("isFirstRun", true);
+        branchPreference = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getString("branchPreference", "");
 
-        if (isFirstRun) {
-
+        if (branchPreference == "") {
             startActivity(new Intent(MainActivity.this, FirstActivity.class));
-            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putBoolean("isFirstRun", false).apply();
-
         } else {
             showTimetable();
         }
@@ -45,9 +42,22 @@ public class MainActivity extends AppCompatActivity {
    //     viewPager.setCurrentItem(dayOfWeek + 1);
     }
 
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (branchPreference == "") {
+            finish();
+        }
+        showTimetable();
+    }
+
     @Override
     protected void onResume() {
         super.onResume();
+        if (branchPreference == "") {
+            finish();
+        }
         showTimetable();
     }
 }
