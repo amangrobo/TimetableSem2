@@ -32,14 +32,18 @@ public class FirstActivity extends AppCompatActivity {
 
 
         StringBuffer alpha = new StringBuffer();
-        for (int i = 0; i < rollNumberString.length(); i++) {
+        StringBuffer beta=new StringBuffer();
+        for (int i = 0; i < rollNumberString.length()-2; i++) {
             if(Character.isAlphabetic(rollNumberString.charAt(i)))
                 alpha.append(rollNumberString.charAt(i));
+            else
+                beta.append(rollNumberString.charAt(i));
         }
 
         branchString = alpha.toString().toLowerCase().trim();
 
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("branchPreference", branchString).apply();
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("branchPre", beta.toString().trim()).apply();
         Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);

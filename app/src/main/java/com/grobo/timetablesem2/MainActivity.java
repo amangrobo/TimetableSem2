@@ -10,10 +10,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     String branchPreference;
+    String branchpre;
 
 
     @Override
@@ -28,13 +30,16 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setTitle("TIMETABLE");
 
         branchPreference = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getString("branchPreference", "");
+branchpre=getSharedPreferences("PREFERENCE", MODE_PRIVATE).getString("branchPre", "");
 
-
-        if (branchPreference == "") {
+        if (branchPreference == ""|| branchpre.compareTo("1801")!=0){
             startActivity(new Intent(MainActivity.this, FirstActivity.class));
-        } else {
+            Toast.makeText(this, "Enter a valid roll number", Toast.LENGTH_SHORT).show();
+        } else if(branchPreference.compareTo("ee")!=0 && branchPreference.compareTo("cs")!=0&& branchPreference.compareTo("cb")!=0&&branchPreference.compareTo("ce")!=0&&branchPreference.compareTo("me")!=0) {
+            startActivity(new Intent(MainActivity.this, FirstActivity.class));
+            Toast.makeText(this, "Enter a valid roll number", Toast.LENGTH_SHORT).show();
+        }else
             showTimetable();
-        }
 
     }
 
