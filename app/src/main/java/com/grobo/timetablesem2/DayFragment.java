@@ -122,11 +122,6 @@ public class DayFragment extends Fragment implements android.support.v4.app.Load
         super.onDestroyView();
     }
 
-    public void showData(){
-
-    }
-
-
     @NonNull
     @Override
     public Loader<List<SingleDay>> onCreateLoader(int i, @Nullable Bundle bundle) {

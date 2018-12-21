@@ -33,7 +33,7 @@ public class FirstActivity extends AppCompatActivity implements android.support.
         EditText rollNumberInput = (EditText) findViewById(R.id.roll_number_input);
         String rollNumberString = rollNumberInput.getText().toString();
 
-        StringBuffer alpha = new StringBuffer();
+        StringBuilder alpha = new StringBuilder();
         for (int i = 0; i < rollNumberString.length(); i++) {
             if(Character.isAlphabetic(rollNumberString.charAt(i)))
                 alpha.append(rollNumberString.charAt(i));
@@ -41,7 +41,7 @@ public class FirstActivity extends AppCompatActivity implements android.support.
 
         branchString = alpha.toString().toLowerCase().trim();
 
-        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("branchPreference", branchString).commit();
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("branchPreference", branchString).apply();
         rollContainer.setVisibility(View.INVISIBLE);
         progressContainer.setVisibility(View.VISIBLE);
         updateJsonData();
@@ -69,13 +69,15 @@ public class FirstActivity extends AppCompatActivity implements android.support.
     public void onLoadFinished(Loader<String> loader, String jsonResponse) {
 
         if (jsonResponse != null && !jsonResponse.isEmpty()){
-            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("jsonString", jsonResponse).apply();
+            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("jsonString", jsonResponse).commit();
         }
 
-        Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(i);
-
+        finish();
     }
 
+    @Override
+    public void onBackPressed() {
+        finish();
+        super.onBackPressed();
+    }
 }

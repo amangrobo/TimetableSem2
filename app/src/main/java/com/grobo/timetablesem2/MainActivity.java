@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity{
 
         branchPreference = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getString("branchPreference", "");
 
-
         if (branchPreference == "") {
             startActivity(new Intent(MainActivity.this, FirstActivity.class));
         } else {
@@ -52,20 +51,14 @@ public class MainActivity extends AppCompatActivity{
 
     @Override
     protected void onStart() {
-        super.onStart();
-        if (branchPreference == "") {
-            finish();
-        }
         showTimetable();
+        super.onStart();
     }
 
     @Override
     protected void onResume() {
-        super.onResume();
-        if (branchPreference == "") {
-            finish();
-        }
         showTimetable();
+        super.onResume();
     }
 
     @Override
@@ -83,4 +76,10 @@ public class MainActivity extends AppCompatActivity{
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
+        android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(1);
+    }
 }
