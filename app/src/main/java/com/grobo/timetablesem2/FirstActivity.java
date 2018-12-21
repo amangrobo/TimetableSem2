@@ -34,14 +34,18 @@ public class FirstActivity extends AppCompatActivity implements android.support.
         String rollNumberString = rollNumberInput.getText().toString();
 
         StringBuilder alpha = new StringBuilder();
-        for (int i = 0; i < rollNumberString.length(); i++) {
+        StringBuffer beta=new StringBuffer();
+        for (int i = 0; i < rollNumberString.length()-2; i++) {
             if(Character.isAlphabetic(rollNumberString.charAt(i)))
                 alpha.append(rollNumberString.charAt(i));
+            else
+                beta.append(rollNumberString.charAt(i));
         }
 
         branchString = alpha.toString().toLowerCase().trim();
 
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("branchPreference", branchString).apply();
+        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("branchPre", beta.toString().trim()).apply();
         rollContainer.setVisibility(View.INVISIBLE);
         progressContainer.setVisibility(View.VISIBLE);
         updateJsonData();
