@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity{
 
     String branchPreference;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity{
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.update){
+            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("branchPreference", "").apply();
             startActivity(new Intent(MainActivity.this, FirstActivity.class));
         }
         return super.onOptionsItemSelected(item);
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity{
 
     @Override
     public void onBackPressed() {
-        
+        finish();
         System.exit(0);
         super.onBackPressed();
     }
