@@ -14,18 +14,19 @@
         android:divider="@null"
         android:dividerHeight="0dp">
     </ListView>
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/task1"
         android:hint="Enter your tasks here"
         android:gravity="center"
-        android:layout_gravity="center_horizontal|center"
-        android:padding="5dp"
+        android:padding="10dp"
         android:layout_margin="15dp"
         android:background="@drawable/shape"
         android:textSize="22sp"
         android:layout_marginTop="20dp"
         android:cursorVisible="false">
     </EditText>
+
 </LinearLayout>
