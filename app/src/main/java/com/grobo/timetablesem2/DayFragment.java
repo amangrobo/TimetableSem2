@@ -1,13 +1,19 @@
 package com.grobo.timetablesem2;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +25,10 @@ public class DayFragment extends Fragment implements android.support.v4.app.Load
     private String mDay;
     private TimeTableAdapter mAdapter;
     private ListView listView;
+    private EditText t;
     public String branchPreference;
     private static final String TIMETABLE_URL = "https://timetable-grobo.firebaseio.com/.json";
+
 
     public static DayFragment newInstance(int page){
         Bundle args = new Bundle();
@@ -35,6 +43,7 @@ public class DayFragment extends Fragment implements android.support.v4.app.Load
         super.onCreate(savedInstanceState);
 
         switch (getArguments().getInt("dayNumber")){
+
             case 1:
                 mDay = "monday";
                 break;
@@ -49,6 +58,12 @@ public class DayFragment extends Fragment implements android.support.v4.app.Load
                 break;
             case 5:
                 mDay = "friday";
+                break;
+            case 6:
+                mDay="saturday";
+                break;
+            case 7:
+                mDay="sunday";
                 break;
             default:
 
@@ -72,6 +87,39 @@ public class DayFragment extends Fragment implements android.support.v4.app.Load
 
         LoaderManager loaderManager = android.support.v4.app.LoaderManager.getInstance(this);
         loaderManager.initLoader(1, null, this);
+        final EditText message = (EditText) rootView.findViewById(R.id.task1);
+        final SharedPreferences prefs = PreferenceManager
+                .getDefaultSharedPreferences(getContext());
+        message.setText(prefs.getString(mDay, ""));
+        message.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                message.setCursorVisible(true);
+            }
+        });
+
+
+        message.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before,
+                                      int count)
+            {
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after)
+            {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s)
+            {
+
+                prefs.edit().putString(mDay, s.toString()).apply();
+
+            }
+        });
 
         return rootView;
     }
