@@ -7,8 +7,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class DaysFragmentAdapter extends FragmentPagerAdapter {
 
-    final int PAGE_COUNT = 5;
-    private String tabTitles[] = new String[] { "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY" };
+    final int PAGE_COUNT = 7;
+    private String tabTitles[] = new String[] { "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY","SATURDAY","SUNDAY" };
     private Context mContext;
 
     public DaysFragmentAdapter(Context context, FragmentManager fm){
