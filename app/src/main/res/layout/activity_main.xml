@@ -10,6 +10,7 @@
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         style="@style/CategoryTab"
+        android:paddingLeft="8dp"
         android:layout_height="wrap_content"
         app:tabMode="scrollable"/>
 
