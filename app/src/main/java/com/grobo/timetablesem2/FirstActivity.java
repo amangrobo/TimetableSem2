@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class FirstActivity extends AppCompatActivity implements android.support.v4.app.LoaderManager.LoaderCallbacks<String>{
 
@@ -43,12 +44,27 @@ public class FirstActivity extends AppCompatActivity implements android.support.
         }
 
         branchString = alpha.toString().toLowerCase().trim();
-
+        String branchpre=beta.toString().trim();
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("branchPreference", branchString).apply();
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("branchPre", beta.toString().trim()).apply();
         rollContainer.setVisibility(View.INVISIBLE);
         progressContainer.setVisibility(View.VISIBLE);
-        updateJsonData();
+        if (branchString == "" || branchpre.compareTo("1801")!=0) {
+            startActivity(new Intent(this, FirstActivity.class));
+            Toast.makeText(this, "Add a valid roll number", Toast.LENGTH_SHORT).show();
+        }
+        else if (branchString.compareTo("ee")!=0 && branchString.compareTo("me")!=0 &&branchString.compareTo("ce")!=0 &&branchString.compareTo("cs")!=0 &&branchString.compareTo("cb")!=0 )
+        {
+            startActivity(new Intent(this, FirstActivity.class));
+            Toast.makeText(this, "Add a valid roll number", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+
+            updateJsonData();
+            startActivity(new Intent(this, MainActivity.class));
+
+        }
 
     }
 

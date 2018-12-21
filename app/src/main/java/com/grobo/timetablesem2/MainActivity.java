@@ -13,8 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity{
 
     String branchPreference;
-    String branchpre;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,21 +26,9 @@ public class MainActivity extends AppCompatActivity{
         actionBar.setTitle("TIMETABLE");
 
         branchPreference = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getString("branchPreference", "");
-        branchpre = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getString("branchPre", "");
 
-        if (branchPreference == "" || branchpre.compareTo("1801")!=0) {
-            startActivity(new Intent(MainActivity.this, FirstActivity.class));
-            Toast.makeText(this, "Add a valid roll number", Toast.LENGTH_SHORT).show();
-        }
-        else if (branchPreference.compareTo("ee")!=0 && branchPreference.compareTo("me")!=0 &&branchPreference.compareTo("ce")!=0 &&branchPreference.compareTo("cs")!=0 &&branchPreference.compareTo("cb")!=0 )
-        {
-            startActivity(new Intent(MainActivity.this, FirstActivity.class));
-            Toast.makeText(this, "Add a valid roll number", Toast.LENGTH_SHORT).show();
-        }
-        else
-         {
-            showTimetable();
-        }
+
+       showTimetable();
 
     }
 
@@ -81,7 +68,6 @@ public class MainActivity extends AppCompatActivity{
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.update){
-            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("branchPreference", "").apply();
             startActivity(new Intent(MainActivity.this, FirstActivity.class));
         }
         return super.onOptionsItemSelected(item);
@@ -89,7 +75,7 @@ public class MainActivity extends AppCompatActivity{
 
     @Override
     public void onBackPressed() {
-        finish();
+        
         System.exit(0);
         super.onBackPressed();
     }
