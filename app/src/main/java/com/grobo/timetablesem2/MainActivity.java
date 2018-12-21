@@ -6,10 +6,16 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     String branchPreference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +27,19 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setElevation(0);
     //    actionBar.setIcon(R.drawable.icon);
         actionBar.setTitle("TIMETABLE");
+        Spinner spinner = (Spinner) findViewById(R.id.branchspinner);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.branch, R.layout.support_simple_spinner_dropdown_item);
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        if (spinner != null) {
+            spinner.setAdapter(adapter);
+        }
 
         branchPreference = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getString("branchPreference", "");
+
 
         if (branchPreference == "") {
             startActivity(new Intent(MainActivity.this, FirstActivity.class));
@@ -44,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
    //     Calendar calendar = Calendar.getInstance();
    //     int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
    //     viewPager.setCurrentItem(dayOfWeek + 1);
+
     }
 
 
@@ -63,5 +81,10 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
         showTimetable();
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main,menu);
+        return true;
     }
 }
