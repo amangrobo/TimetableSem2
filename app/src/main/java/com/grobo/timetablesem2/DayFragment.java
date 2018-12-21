@@ -3,6 +3,8 @@ package com.grobo.timetablesem2;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
@@ -13,7 +15,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,10 +26,7 @@ public class DayFragment extends Fragment implements android.support.v4.app.Load
     private String mDay;
     private TimeTableAdapter mAdapter;
     private ListView listView;
-    private EditText t;
     public String branchPreference;
-    private static final String TIMETABLE_URL = "https://timetable-grobo.firebaseio.com/.json";
-
 
     public static DayFragment newInstance(int page){
         Bundle args = new Bundle();
@@ -86,10 +84,10 @@ public class DayFragment extends Fragment implements android.support.v4.app.Load
         listView.setAdapter(mAdapter);
 
         LoaderManager loaderManager = android.support.v4.app.LoaderManager.getInstance(this);
-        loaderManager.initLoader(1, null, this);
+        loaderManager.initLoader(2, null, this);
+
         final EditText message = (EditText) rootView.findViewById(R.id.task1);
-        final SharedPreferences prefs = PreferenceManager
-                .getDefaultSharedPreferences(getContext());
+        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
         message.setText(prefs.getString(mDay, ""));
         message.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,23 +99,16 @@ public class DayFragment extends Fragment implements android.support.v4.app.Load
 
         message.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onTextChanged(CharSequence s, int start, int before,
-                                      int count)
-            {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
             }
 
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count,
-                                          int after)
-            {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
 
             @Override
-            public void afterTextChanged(Editable s)
-            {
-
+            public void afterTextChanged(Editable s) {
                 prefs.edit().putString(mDay, s.toString()).apply();
-
             }
         });
 
@@ -127,29 +118,31 @@ public class DayFragment extends Fragment implements android.support.v4.app.Load
 
     @Override
     public void onDestroyView() {
+        mAdapter.clear();
         super.onDestroyView();
     }
 
+    public void showData(){
 
+    }
+
+
+    @NonNull
     @Override
-    public Loader<List<SingleDay>> onCreateLoader(int i, Bundle bundle) {
-
-        return new TimetableLoader(getContext(), TIMETABLE_URL, branchPreference, mDay);
+    public Loader<List<SingleDay>> onCreateLoader(int i, @Nullable Bundle bundle) {
+        return new JsonLoader(getContext(), mDay);
     }
 
     @Override
-    public void onLoaderReset(Loader<List<SingleDay>> loader) {
+    public void onLoadFinished(@NonNull Loader<List<SingleDay>> loader, List<SingleDay> singleDayList) {
         mAdapter.clear();
-    }
-
-    @Override
-    public void onLoadFinished(Loader<List<SingleDay>> loader, List<SingleDay> singleDayList) {
-        mAdapter.clear();
-
         if (singleDayList != null && !singleDayList.isEmpty()){
             mAdapter.addAll(singleDayList);
         }
-
     }
 
+    @Override
+    public void onLoaderReset(@NonNull Loader<List<SingleDay>> loader) {
+        mAdapter.clear();
+    }
 }

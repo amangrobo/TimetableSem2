@@ -26,7 +26,8 @@ public final class QueryUtils {
     private QueryUtils() {
     }
 
-    public static List<SingleDay> doEverything(String requestUrl, String branchPreference, String dayPreference){
+
+    public static String doEverything(String requestUrl){
         URL url = createUrl(requestUrl);
 
         String jsonResponse = null;
@@ -38,12 +39,10 @@ public final class QueryUtils {
             Log.e(LOG_TAG, "Problem making the HTTP request.", e);
         }
 
-        List<SingleDay> timetableData = extractTimetable(jsonResponse, branchPreference, dayPreference);
-
-        return timetableData;
+        return jsonResponse;
     }
 
-    private static List<SingleDay> extractTimetable(String jsonResponse, String branchPreference, String dayPreference) {
+    public static List<SingleDay> extractTimetable(String jsonResponse, String branchPreference, String dayPreference) {
 
         if (TextUtils.isEmpty(jsonResponse)) {
             return null;
