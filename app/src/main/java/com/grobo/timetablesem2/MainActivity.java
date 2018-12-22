@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -26,11 +27,8 @@ public class MainActivity extends AppCompatActivity{
 
         branchPreference = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getString("branchPreference", "");
 
-        if (branchPreference == "") {
-            startActivity(new Intent(MainActivity.this, FirstActivity.class));
-        } else {
-            showTimetable();
-        }
+
+       showTimetable();
 
     }
 
