@@ -12,6 +12,8 @@ import android.widget.TextView;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import android.widget.Toast;
+
 public class MainActivity extends AppCompatActivity{
     TextView date;
 
@@ -30,11 +32,8 @@ public class MainActivity extends AppCompatActivity{
 
         branchPreference = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getString("branchPreference", "");
 
-        if (branchPreference == "") {
-            startActivity(new Intent(MainActivity.this, FirstActivity.class));
-        } else {
-            showTimetable();
-        }
+
+       showTimetable();
 
         date=(TextView)findViewById(R.id.date);
         SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
