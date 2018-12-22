@@ -48,9 +48,6 @@ public class FirstActivity extends AppCompatActivity implements android.support.
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("branchPreference", branchString).apply();
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("branchPre", beta.toString().trim()).apply();
 
-        rollContainer.setVisibility(View.INVISIBLE);
-        progressContainer.setVisibility(View.VISIBLE);
-
         if (branchString == "" || branchPre.compareTo("1801")!=0) {
             Toast.makeText(this, "Add a valid roll number", Toast.LENGTH_SHORT).show();
         }
@@ -61,6 +58,8 @@ public class FirstActivity extends AppCompatActivity implements android.support.
         else
         {
             updateJsonData();
+            rollContainer.setVisibility(View.INVISIBLE);
+            progressContainer.setVisibility(View.VISIBLE);
         }
 
     }
