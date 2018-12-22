@@ -8,9 +8,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity{
+    TextView date;
 
     String branchPreference;
 
@@ -30,6 +35,13 @@ public class MainActivity extends AppCompatActivity{
 
        showTimetable();
 
+        date=(TextView)findViewById(R.id.date);
+        SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
+        SimpleDateFormat sd = new SimpleDateFormat("dd/MM/yyyy");
+        Date d = new Date();
+        String dayOfTheWeek = sdf.format(d);
+        String dateo=sd.format(d);
+        date.setText("Today is "+dateo+"   --  "+dayOfTheWeek);
     }
 
     private void showTimetable(){
