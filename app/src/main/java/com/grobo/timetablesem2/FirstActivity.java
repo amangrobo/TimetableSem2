@@ -85,10 +85,12 @@ public class FirstActivity extends AppCompatActivity implements android.support.
     public void onLoadFinished(Loader<String> loader, String jsonResponse) {
 
         if (jsonResponse != null && !jsonResponse.isEmpty()){
-            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("jsonString", jsonResponse).apply();
+            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("jsonString", jsonResponse).commit();
         }
 
-        finish();
+        Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
     }
 
     @Override
