@@ -35,7 +35,7 @@ public class FirstActivity extends AppCompatActivity implements android.support.
         String rollNumberString = rollNumberInput.getText().toString();
 
         StringBuilder alpha = new StringBuilder();
-        StringBuffer beta=new StringBuffer();
+        StringBuilder beta = new StringBuilder();
         for (int i = 0; i < rollNumberString.length()-2; i++) {
             if(Character.isAlphabetic(rollNumberString.charAt(i)))
                 alpha.append(rollNumberString.charAt(i));
@@ -44,26 +44,23 @@ public class FirstActivity extends AppCompatActivity implements android.support.
         }
 
         branchString = alpha.toString().toLowerCase().trim();
-        String branchpre=beta.toString().trim();
+        String branchPre=beta.toString().trim();
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("branchPreference", branchString).apply();
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("branchPre", beta.toString().trim()).apply();
+
         rollContainer.setVisibility(View.INVISIBLE);
         progressContainer.setVisibility(View.VISIBLE);
-        if (branchString == "" || branchpre.compareTo("1801")!=0) {
-            startActivity(new Intent(this, FirstActivity.class));
+
+        if (branchString == "" || branchPre.compareTo("1801")!=0) {
             Toast.makeText(this, "Add a valid roll number", Toast.LENGTH_SHORT).show();
         }
         else if (branchString.compareTo("ee")!=0 && branchString.compareTo("me")!=0 &&branchString.compareTo("ce")!=0 &&branchString.compareTo("cs")!=0 &&branchString.compareTo("cb")!=0 )
         {
-            startActivity(new Intent(this, FirstActivity.class));
             Toast.makeText(this, "Add a valid roll number", Toast.LENGTH_SHORT).show();
         }
         else
         {
-
             updateJsonData();
-            startActivity(new Intent(this, MainActivity.class));
-
         }
 
     }
@@ -89,7 +86,7 @@ public class FirstActivity extends AppCompatActivity implements android.support.
     public void onLoadFinished(Loader<String> loader, String jsonResponse) {
 
         if (jsonResponse != null && !jsonResponse.isEmpty()){
-            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("jsonString", jsonResponse).commit();
+            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("jsonString", jsonResponse).apply();
         }
 
         finish();

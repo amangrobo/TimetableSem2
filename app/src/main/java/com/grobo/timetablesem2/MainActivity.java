@@ -8,16 +8,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import android.widget.Toast;
 
+import java.util.Calendar;
+
 public class MainActivity extends AppCompatActivity{
-    TextView date;
 
     String branchPreference;
+    private int dayOfWeek;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,18 +28,16 @@ public class MainActivity extends AppCompatActivity{
     //    actionBar.setIcon(R.drawable.icon);
         actionBar.setTitle("TIMETABLE");
 
+        Calendar calendar = Calendar.getInstance();
+        dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
+
         branchPreference = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getString("branchPreference", "");
 
-
-       showTimetable();
-
-        date=(TextView)findViewById(R.id.date);
-        SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
-        SimpleDateFormat sd = new SimpleDateFormat("dd/MM/yyyy");
-        Date d = new Date();
-        String dayOfTheWeek = sdf.format(d);
-        String dateo=sd.format(d);
-        date.setText("Today is "+dateo+"   --  "+dayOfTheWeek);
+        if (branchPreference == "") {
+            startActivity(new Intent(MainActivity.this, FirstActivity.class));
+        } else {
+            showTimetable();
+        }
     }
 
     private void showTimetable(){
@@ -53,9 +49,7 @@ public class MainActivity extends AppCompatActivity{
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(viewPager);
 
-   //     Calendar calendar = Calendar.getInstance();
-   //     int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
-   //     viewPager.setCurrentItem(dayOfWeek + 1);
+        viewPager.setCurrentItem(dayOfWeek - 2);
 
     }
 
@@ -89,7 +83,7 @@ public class MainActivity extends AppCompatActivity{
     @Override
     public void onBackPressed() {
         finish();
-        System.exit(0);
+
         super.onBackPressed();
     }
 }
