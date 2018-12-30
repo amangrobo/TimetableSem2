@@ -3,19 +3,19 @@
     "cs": {
       "monday": [
         {
-          "subject": "MA225",
+          "subject": "MA225(R303)",
           "time": "08 - 11",
           "room": "R303",
           "name": "Probability and Statistics"
         },
         {
-          "subject": "CS226",
+          "subject": "CS226(CSL3)",
           "time": "02 - 05",
           "room": "CS Lab 3",
           "name": "Switching Theory Lab"
         },
         {
-          "subject": "PH201",
+          "subject": "PH201(R303)",
           "time": "05 - 06",
           "room": "R303",
           "name": "Optics and Lasers"
@@ -23,19 +23,19 @@
       ],
       "tuesday": [
         {
-          "subject": "CS225",
+          "subject": "CS225(R302)",
           "time": "09 - 10",
           "room": "R302",
           "name": "Switching Theory"
         },
         {
-          "subject": "MA225",
+          "subject": "MA225(R303)",
           "time": "10 - 11",
           "room": "R303",
           "name": "Probability and Statistics"
         },
         {
-          "subject": "PH201",
+          "subject": "PH201(R303)",
           "time": "05 - 06",
           "room": "R107",
           "name": "Optics and Lasers"
@@ -43,25 +43,25 @@
       ],
       "wednesday": [
         {
-          "subject": "CS244",
+          "subject": "CS244(R107)",
           "time": "09 - 10",
           "room": "R308",
-          "name": ""
+          "name": "Introduction to Data Science"
         },
         {
-          "subject": "MA225",
+          "subject": "MA225(R303)",
           "time": "10 - 11",
           "room": "R303",
           "name": "Probability and Statistics"
         },
         {
-          "subject": "HS202",
+          "subject": "HS202(R308)",
           "time": "12 - 01",
           "room": "R308",
           "name": "Introductory Macroeconomics"
         },
         {
-          "subject": "PH201",
+          "subject": "PH201(R303)",
           "time": "05 - 06",
           "room": "R107",
           "name": "Optics and Lasers"
@@ -69,19 +69,19 @@
       ],
       "thursday": [
         {
-          "subject": "CS225",
+          "subject": "CS225(R302)",
           "time": "10 - 11",
           "room": "R302",
           "name": "Switching Theory"
         },
         {
-          "subject": "HS202",
+          "subject": "HS202(R308)",
           "time": "12 - 01",
           "room": "R308",
           "name": "Introductory Macroeconomics"
         },
         {
-          "subject": "CS244",
+          "subject": "CS244(R107)",
           "time": "05 - 06",
           "room": "R107",
           "name": "Introduction to Data Science"
@@ -89,25 +89,25 @@
       ],
       "friday": [
         {
-          "subject": "CS244",
+          "subject": "CS244(R107)",
           "time": "09 - 10",
           "room": "R302",
-          "name": ""
+          "name": "Introduction to Data Science"
         },
         {
-          "subject": "CS225",
+          "subject": "CS225(R302)",
           "time": "10 - 11",
           "room": "R302",
           "name": "Switching Theory"
         },
         {
-          "subject": "HS202",
+          "subject": "HS202(R308)",
           "time": "12 - 01",
           "room": "R308",
           "name": "Introductory Macroeconomics"
         },
         {
-          "subject": "CS299",
+          "subject": "CS299(CSL2)",
           "time": "02 - 05",
           "room": "CS Lab 2",
           "name": "Innovation Design Lab"
