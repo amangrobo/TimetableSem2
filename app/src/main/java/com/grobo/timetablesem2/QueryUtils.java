@@ -42,7 +42,7 @@ public final class QueryUtils {
         return jsonResponse;
     }
 
-    public static List<SingleDay> extractTimetable(String jsonResponse, String branchPreference, String dayPreference) {
+    public static List<SingleDay> extractTimetable(String jsonResponse, String branchPre, String branchPreference, String dayPreference) {
 
         if (TextUtils.isEmpty(jsonResponse)) {
             return null;
@@ -53,7 +53,8 @@ public final class QueryUtils {
         try {
 
             JSONObject jsonObject = new JSONObject(jsonResponse);
-            JSONObject branch = jsonObject.getJSONObject(branchPreference);
+            JSONObject branchYear = jsonObject.getJSONObject(branchPre);
+            JSONObject branch = branchYear.getJSONObject(branchPreference);
 
             JSONArray day = branch.getJSONArray(dayPreference);
 

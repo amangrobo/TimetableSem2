@@ -1,0 +1,1154 @@
+{
+  "1701": {
+    "cs": {
+      "monday": [
+        {
+          "subject": "MA225",
+          "time": "08 - 10",
+          "room": "R303",
+          "name": "Probability and Statistics"
+        },
+        {
+          "subject": "MA225",
+          "time": "10 - 11",
+          "room": "R303",
+          "name": "Probability and Statistics"
+        },
+        {
+          "subject": "CS226",
+          "time": "02 - 05",
+          "room": "CS Lab 3",
+          "name": "Switching Theory Lab"
+        },
+        {
+          "subject": "PH201",
+          "time": "05 - 06",
+          "room": "R303",
+          "name": "Optics and Lasers"
+        }
+      ],
+      "tuesday": [
+        {
+          "subject": "CS225",
+          "time": "09 - 10",
+          "room": "R302",
+          "name": "Switching Theory"
+        },
+        {
+          "subject": "MA225",
+          "time": "10 - 11",
+          "room": "R303",
+          "name": "Probability and Statistics"
+        },
+        {
+          "subject": "PH201",
+          "time": "05 - 06",
+          "room": "R107",
+          "name": "Optics and Lasers"
+        }
+      ],
+      "wednesday": [
+        {
+          "subject": "MA225",
+          "time": "10 - 11",
+          "room": "R303",
+          "name": "Probability and Statistics"
+        },
+        {
+          "subject": "HS202",
+          "time": "12 - 01",
+          "room": "R308",
+          "name": "Introductory Macroeconomics"
+        },
+        {
+          "subject": "PH201",
+          "time": "05 - 06",
+          "room": "R107",
+          "name": "Optics and Lasers"
+        }
+      ],
+      "thursday": [
+        {
+          "subject": "CS225",
+          "time": "10 - 11",
+          "room": "R302",
+          "name": "Switching Theory"
+        },
+        {
+          "subject": "HS202",
+          "time": "12 - 01",
+          "room": "R308",
+          "name": "Introductory Macroeconomics"
+        },
+        {
+          "subject": "CS244",
+          "time": "05 - 06",
+          "room": "R107",
+          "name": "Introduction to Data Science"
+        }
+      ],
+      "friday": [
+        {
+          "subject": "CS225",
+          "time": "10 - 11",
+          "room": "R302",
+          "name": "Switching Theory"
+        },
+        {
+          "subject": "HS202",
+          "time": "12 - 01",
+          "room": "R308",
+          "name": "Introductory Macroeconomics"
+        },
+        {
+          "subject": "CS299",
+          "time": "02 - 05",
+          "room": "CS Lab 2",
+          "name": "Innovation Design Lab"
+        }
+      ]
+    }
+  },
+  "1801": {
+    "cs": {
+      "monday": [
+        {
+          "subject": "CH103 (tut)",
+          "time": "08 - 09"
+        },
+        {
+          "subject": "ME102",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "CE102",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "MA102",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "HS104",
+          "time": "12 - 01"
+        },
+        {
+          "subject": "CH110",
+          "time": "02 - 05"
+        }
+      ],
+      "tuesday": [
+        {
+          "subject": "MA102 (tut)",
+          "time": "08 - 09"
+        },
+        {
+          "subject": "CE102",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "MA102",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "ME102",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "CS102",
+          "time": "12 - 01"
+        }
+      ],
+      "wednesday": [
+        {
+          "subject": "ME102 (tut)",
+          "time": "08 - 09"
+        },
+        {
+          "subject": "CH103",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "MA102",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "CS102",
+          "time": "12 - 01"
+        }
+      ],
+      "thursday": [
+        {
+          "subject": "CE102",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "HS104",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "CH103",
+          "time": "12 - 01"
+        },
+        {
+          "subject": "CS112",
+          "time": "02 - 05"
+        }
+      ],
+      "friday": [
+        {
+          "subject": "CH103",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "CS102",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "ME102",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "EE103",
+          "time": "02 - 05"
+        }
+      ]
+    },
+    "ee": {
+      "monday": [
+        {
+          "subject": "CH103 (tut)",
+          "time": "08 - 09"
+        },
+        {
+          "subject": "CS102",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "CB102",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "HS104",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "MA102",
+          "time": "12 - 01"
+        },
+        {
+          "subject": "CS112",
+          "time": "02 - 05"
+        }
+      ],
+      "tuesday": [
+        {
+          "subject": "MA102 (tut)",
+          "time": "08 - 09"
+        },
+        {
+          "subject": "CB102",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "ME102",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "MA102",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "CH103",
+          "time": "12 - 01"
+        },
+        {
+          "subject": "EE103",
+          "time": "02 - 05"
+        }
+      ],
+      "wednesday": [
+        {
+          "subject": "ME102 (tut)",
+          "time": "08 - 09"
+        },
+        {
+          "subject": "ME102",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "CH103",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "MA102",
+          "time": "12 - 01"
+        }
+      ],
+      "thursday": [
+        {
+          "subject": "CS102",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "CB102",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "CH103",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "HS104",
+          "time": "12 - 01"
+        }
+      ],
+      "friday": [
+        {
+          "subject": "ME102",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "CS102",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "CH110",
+          "time": "02 - 05"
+        }
+      ]
+    },
+    "me": {
+      "monday": [
+        {
+          "subject": "CH103 (tut)",
+          "time": "08 - 09"
+        },
+        {
+          "subject": "CS102",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "CB102",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "MA102",
+          "time": "12 - 01"
+        }
+      ],
+      "tuesday": [
+        {
+          "subject": "MA102 (tut)",
+          "time": "08 - 09"
+        },
+        {
+          "subject": "CB102",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "ME102",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "MA102",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "CH103",
+          "time": "12 - 01"
+        },
+        {
+          "subject": "CS110",
+          "time": "02 - 05"
+        }
+      ],
+      "wednesday": [
+        {
+          "subject": "ME102 (tut)",
+          "time": "08 - 09"
+        },
+        {
+          "subject": "ME102",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "CH103",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "HS104",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "MA102",
+          "time": "12 - 01"
+        }
+      ],
+      "thursday": [
+        {
+          "subject": "CS102",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "CB102",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "CH103",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "EE103",
+          "time": "02 - 05"
+        }
+      ],
+      "friday": [
+        {
+          "subject": "ME102",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "HS104",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "CS102",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "CS112",
+          "time": "02 - 05"
+        }
+      ]
+    },
+    "ce": {
+      "monday": [
+        {
+          "subject": "CH103 (tut)",
+          "time": "08 - 09"
+        },
+        {
+          "subject": "ME102",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "CE102",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "MA102",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "EE103",
+          "time": "02 - 05"
+        }
+      ],
+      "tuesday": [
+        {
+          "subject": "MA102 (tut)",
+          "time": "08 - 09"
+        },
+        {
+          "subject": "CE102",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "MA102",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "ME102",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "CS102",
+          "time": "12 - 01"
+        },
+        {
+          "subject": "CS112",
+          "time": "02 - 05"
+        }
+      ],
+      "wednesday": [
+        {
+          "subject": "ME102 (tut)",
+          "time": "08 - 09"
+        },
+        {
+          "subject": "CH103",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "HS104",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "MA102",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "CS102",
+          "time": "12 - 01"
+        }
+      ],
+      "thursday": [
+        {
+          "subject": "CE102",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "CH103",
+          "time": "12 - 01"
+        },
+        {
+          "subject": "CH110",
+          "time": "02 - 05"
+        }
+      ],
+      "friday": [
+        {
+          "subject": "CH103",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "CS102",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "ME102",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "HS104",
+          "time": "12 - 01"
+        }
+      ]
+    },
+    "cb": {
+      "monday": [
+        {
+          "subject": "CH103 (tut)",
+          "time": "08 - 09"
+        },
+        {
+          "subject": "ME102",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "CE102",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "MA102",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "EE103",
+          "time": "02 - 05"
+        }
+      ],
+      "tuesday": [
+        {
+          "subject": "MA102 (tut)",
+          "time": "08 - 09"
+        },
+        {
+          "subject": "CE102",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "MA102",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "ME102",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "CS102",
+          "time": "12 - 01"
+        },
+        {
+          "subject": "CS112",
+          "time": "02 - 05"
+        }
+      ],
+      "wednesday": [
+        {
+          "subject": "ME102 (tut)",
+          "time": "08 - 09"
+        },
+        {
+          "subject": "CH103",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "HS104",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "MA102",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "CS102",
+          "time": "12 - 01"
+        }
+      ],
+      "thursday": [
+        {
+          "subject": "CE102",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "CH103",
+          "time": "12 - 01"
+        },
+        {
+          "subject": "CH110",
+          "time": "02 - 05"
+        }
+      ],
+      "friday": [
+        {
+          "subject": "CH103",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "CS102",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "ME102",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "HS104",
+          "time": "12 - 01"
+        }
+      ]
+    }
+  },
+  "cs": {
+    "monday": [
+      {
+        "subject": "CH103 (tut)",
+        "time": "08 - 09"
+      },
+      {
+        "subject": "ME102",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "CE102",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "MA102",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "HS104",
+        "time": "12 - 01"
+      },
+      {
+        "subject": "CH110",
+        "time": "02 - 05"
+      }
+    ],
+    "tuesday": [
+      {
+        "subject": "MA102 (tut)",
+        "time": "08 - 09"
+      },
+      {
+        "subject": "CE102",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "MA102",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "ME102",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "CS102",
+        "time": "12 - 01"
+      }
+    ],
+    "wednesday": [
+      {
+        "subject": "ME102 (tut)",
+        "time": "08 - 09"
+      },
+      {
+        "subject": "CH103",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "MA102",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "CS102",
+        "time": "12 - 01"
+      }
+    ],
+    "thursday": [
+      {
+        "subject": "CE102",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "HS104",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "CH103",
+        "time": "12 - 01"
+      },
+      {
+        "subject": "CS112",
+        "time": "02 - 05"
+      }
+    ],
+    "friday": [
+      {
+        "subject": "CH103",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "CS102",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "ME102",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "EE103",
+        "time": "02 - 05"
+      }
+    ]
+  },
+  "ee": {
+    "monday": [
+      {
+        "subject": "CH103 (tut)",
+        "time": "08 - 09"
+      },
+      {
+        "subject": "CS102",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "CB102",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "HS104",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "MA102",
+        "time": "12 - 01"
+      },
+      {
+        "subject": "CS112",
+        "time": "02 - 05"
+      }
+    ],
+    "tuesday": [
+      {
+        "subject": "MA102 (tut)",
+        "time": "08 - 09"
+      },
+      {
+        "subject": "CB102",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "ME102",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "MA102",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "CH103",
+        "time": "12 - 01"
+      },
+      {
+        "subject": "EE103",
+        "time": "02 - 05"
+      }
+    ],
+    "wednesday": [
+      {
+        "subject": "ME102 (tut)",
+        "time": "08 - 09"
+      },
+      {
+        "subject": "ME102",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "CH103",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "MA102",
+        "time": "12 - 01"
+      }
+    ],
+    "thursday": [
+      {
+        "subject": "CS102",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "CB102",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "CH103",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "HS104",
+        "time": "12 - 01"
+      }
+    ],
+    "friday": [
+      {
+        "subject": "ME102",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "CS102",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "CH110",
+        "time": "02 - 05"
+      }
+    ]
+  },
+  "me": {
+    "monday": [
+      {
+        "subject": "CH103 (tut)",
+        "time": "08 - 09"
+      },
+      {
+        "subject": "CS102",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "CB102",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "MA102",
+        "time": "12 - 01"
+      }
+    ],
+    "tuesday": [
+      {
+        "subject": "MA102 (tut)",
+        "time": "08 - 09"
+      },
+      {
+        "subject": "CB102",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "ME102",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "MA102",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "CH103",
+        "time": "12 - 01"
+      },
+      {
+        "subject": "CS110",
+        "time": "02 - 05"
+      }
+    ],
+    "wednesday": [
+      {
+        "subject": "ME102 (tut)",
+        "time": "08 - 09"
+      },
+      {
+        "subject": "ME102",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "CH103",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "HS104",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "MA102",
+        "time": "12 - 01"
+      }
+    ],
+    "thursday": [
+      {
+        "subject": "CS102",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "CB102",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "CH103",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "EE103",
+        "time": "02 - 05"
+      }
+    ],
+    "friday": [
+      {
+        "subject": "ME102",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "HS104",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "CS102",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "CS112",
+        "time": "02 - 05"
+      }
+    ]
+  },
+  "ce": {
+    "monday": [
+      {
+        "subject": "CH103 (tut)",
+        "time": "08 - 09"
+      },
+      {
+        "subject": "ME102",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "CE102",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "MA102",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "EE103",
+        "time": "02 - 05"
+      }
+    ],
+    "tuesday": [
+      {
+        "subject": "MA102 (tut)",
+        "time": "08 - 09"
+      },
+      {
+        "subject": "CE102",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "MA102",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "ME102",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "CS102",
+        "time": "12 - 01"
+      },
+      {
+        "subject": "CS112",
+        "time": "02 - 05"
+      }
+    ],
+    "wednesday": [
+      {
+        "subject": "ME102 (tut)",
+        "time": "08 - 09"
+      },
+      {
+        "subject": "CH103",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "HS104",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "MA102",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "CS102",
+        "time": "12 - 01"
+      }
+    ],
+    "thursday": [
+      {
+        "subject": "CE102",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "CH103",
+        "time": "12 - 01"
+      },
+      {
+        "subject": "CH110",
+        "time": "02 - 05"
+      }
+    ],
+    "friday": [
+      {
+        "subject": "CH103",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "CS102",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "ME102",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "HS104",
+        "time": "12 - 01"
+      }
+    ]
+  },
+  "cb": {
+    "monday": [
+      {
+        "subject": "CH103 (tut)",
+        "time": "08 - 09"
+      },
+      {
+        "subject": "ME102",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "CE102",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "MA102",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "EE103",
+        "time": "02 - 05"
+      }
+    ],
+    "tuesday": [
+      {
+        "subject": "MA102 (tut)",
+        "time": "08 - 09"
+      },
+      {
+        "subject": "CE102",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "MA102",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "ME102",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "CS102",
+        "time": "12 - 01"
+      },
+      {
+        "subject": "CS112",
+        "time": "02 - 05"
+      }
+    ],
+    "wednesday": [
+      {
+        "subject": "ME102 (tut)",
+        "time": "08 - 09"
+      },
+      {
+        "subject": "CH103",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "HS104",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "MA102",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "CS102",
+        "time": "12 - 01"
+      }
+    ],
+    "thursday": [
+      {
+        "subject": "CE102",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "CH103",
+        "time": "12 - 01"
+      },
+      {
+        "subject": "CH110",
+        "time": "02 - 05"
+      }
+    ],
+    "friday": [
+      {
+        "subject": "CH103",
+        "time": "09 - 10"
+      },
+      {
+        "subject": "CS102",
+        "time": "10 - 11"
+      },
+      {
+        "subject": "ME102",
+        "time": "11 - 12"
+      },
+      {
+        "subject": "HS104",
+        "time": "12 - 01"
+      }
+    ]
+  }
+}

@@ -26,7 +26,6 @@ public class DayFragment extends Fragment implements android.support.v4.app.Load
     private String mDay;
     private TimeTableAdapter mAdapter;
     private ListView listView;
-    public String branchPreference;
 
     public static DayFragment newInstance(int page){
         Bundle args = new Bundle();
@@ -67,7 +66,6 @@ public class DayFragment extends Fragment implements android.support.v4.app.Load
 
         }
 
-        branchPreference = getContext().getSharedPreferences("PREFERENCE", MODE_PRIVATE).getString("branchPreference", "");
     }
 
     @Override

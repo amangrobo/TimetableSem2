@@ -16,6 +16,7 @@ public class FirstActivity extends AppCompatActivity implements android.support.
     private static final String TIMETABLE_URL = "https://timetable-grobo.firebaseio.com/.json";
     private View progressContainer;
     private View rollContainer;
+    private String branchPre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,11 +45,9 @@ public class FirstActivity extends AppCompatActivity implements android.support.
         }
 
         branchString = alpha.toString().toLowerCase().trim();
-        String branchPre=beta.toString().trim();
-        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("branchPreference", branchString).apply();
-        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("branchPre", beta.toString().trim()).apply();
+        branchPre=beta.toString().trim();
 
-        if (branchString == "" || branchPre.compareTo("1801")!=0) {
+        if (branchString == "" || (branchPre.compareTo("1801")!=0 && branchPre.compareTo("1701")!=0)) {
             Toast.makeText(this, "Add a valid roll number", Toast.LENGTH_SHORT).show();
         }
         else if (branchString.compareTo("ee")!=0 && branchString.compareTo("me")!=0 &&branchString.compareTo("ce")!=0 &&branchString.compareTo("cs")!=0 &&branchString.compareTo("cb")!=0 )
@@ -57,6 +56,8 @@ public class FirstActivity extends AppCompatActivity implements android.support.
         }
         else
         {
+            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("branchPreference", branchString).apply();
+            getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putString("branchPre", branchPre).apply();
             updateJsonData();
             rollContainer.setVisibility(View.INVISIBLE);
             progressContainer.setVisibility(View.VISIBLE);
