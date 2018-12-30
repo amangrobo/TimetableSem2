@@ -4,13 +4,7 @@
       "monday": [
         {
           "subject": "MA225",
-          "time": "08 - 10",
-          "room": "R303",
-          "name": "Probability and Statistics"
-        },
-        {
-          "subject": "MA225",
-          "time": "10 - 11",
+          "time": "08 - 11",
           "room": "R303",
           "name": "Probability and Statistics"
         },
@@ -52,7 +46,7 @@
           "subject": "CS244",
           "time": "09 - 10",
           "room": "R308",
-          "name": "Introductory Macroeconomics"
+          "name": ""
         },
         {
           "subject": "MA225",
@@ -98,7 +92,7 @@
           "subject": "CS244",
           "time": "09 - 10",
           "room": "R302",
-          "name": "Switching Theory"
+          "name": ""
         },
         {
           "subject": "CS225",
