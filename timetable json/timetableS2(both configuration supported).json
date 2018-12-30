@@ -49,6 +49,12 @@
       ],
       "wednesday": [
         {
+          "subject": "CS244",
+          "time": "09 - 10",
+          "room": "R308",
+          "name": "Introductory Macroeconomics"
+        },
+        {
           "subject": "MA225",
           "time": "10 - 11",
           "room": "R303",
@@ -88,6 +94,12 @@
         }
       ],
       "friday": [
+        {
+          "subject": "CS244",
+          "time": "09 - 10",
+          "room": "R302",
+          "name": "Switching Theory"
+        },
         {
           "subject": "CS225",
           "time": "10 - 11",
