@@ -113,6 +113,90 @@
           "name": "Innovation Design Lab"
         }
       ]
+    },
+    "me": {
+      "monday": [
+        {
+          "subject": "ME214(R307)",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "ME216(R107)",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "ME208(R107)",
+          "time": "12 - 01",
+        },
+        {
+          "subject": "ME208(Lab)",
+          "time": "03 - 05",
+        }
+      ],
+      "tuesday": [
+        {
+          "subject": "ME216(R105)",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "ME208(R301)",
+          "time": "12 - 01",
+        }
+      ],
+      "wednesday": [
+        {
+          "subject": "CS244(R107)",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "ME208(R301)",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "HS223(R109)",
+          "time": "12 - 01",
+        }
+      ],
+      "thursday": [
+        {
+          "subject": "ME216(R307)",
+          "time": "10 - 11"
+        },
+        {
+          "subject": "ME214(R307)",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "HS223(R109)",
+          "time": "12 - 01",
+        },
+        {
+          "subject": "CS244(R107)",
+          "time": "05 - 06",
+        }
+      ],
+      "friday": [
+        {
+          "subject": "CS244(R107)",
+          "time": "09 - 10"
+        },
+        {
+          "subject": "ME214(R307)",
+          "time": "11 - 12"
+        },
+        {
+          "subject": "HS223(R109)",
+          "time": "12 - 01",
+        },
+        {
+          "subject": "ME216(Lab1)",
+          "time": "02 - 06",
+        },
+        {
+          "subject": "ME292(Lab)",
+          "time": "02 - 06",
+        }
+      ]
     }
   },
   "1801": {
