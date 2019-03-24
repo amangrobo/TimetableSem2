@@ -13,7 +13,6 @@ import android.widget.Toast;
 public class FirstActivity extends AppCompatActivity implements android.support.v4.app.LoaderManager.LoaderCallbacks<String>{
 
     private String branchString;
-    private static final String TIMETABLE_URL = "https://timetable-grobo.firebaseio.com/.json";
     private View progressContainer;
     private View rollContainer;
     private String branchPre;
@@ -75,7 +74,7 @@ public class FirstActivity extends AppCompatActivity implements android.support.
     @Override
     public Loader<String> onCreateLoader(int i, Bundle bundle) {
 
-        return new TimetableLoader(this, TIMETABLE_URL);
+        return new TimetableLoader(this, branchPre, branchString);
     }
 
     @Override

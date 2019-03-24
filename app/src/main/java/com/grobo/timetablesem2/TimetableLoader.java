@@ -7,10 +7,11 @@ public class TimetableLoader extends AsyncTaskLoader<String> {
 
     private static final String LOG_TAG = TimetableLoader.class.getName();
     private String mUrl;
+    private static final String TIMETABLE_URL = "https://timetable-grobo.firebaseio.com/";
 
-    public TimetableLoader(Context context, String url) {
+    public TimetableLoader(Context context, String branchPre, String branch) {
         super(context);
-        mUrl = url;
+        mUrl = TIMETABLE_URL + branchPre + "/" + branch + "/.json/";
     }
 
     @Override
@@ -20,9 +21,7 @@ public class TimetableLoader extends AsyncTaskLoader<String> {
 
     @Override
     public String loadInBackground() {
-        if (mUrl == null) {
-            return null;
-        }
+
         String jsonResponse = QueryUtils.doEverything(mUrl);
         return  jsonResponse;
     }

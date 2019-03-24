@@ -19,8 +19,6 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.content.Context.MODE_PRIVATE;
-
 public class DayFragment extends Fragment implements android.support.v4.app.LoaderManager.LoaderCallbacks<List<SingleDay>>{
 
     private String mDay;
